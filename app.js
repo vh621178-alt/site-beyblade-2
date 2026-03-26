@@ -1,4 +1,4 @@
-// DADOS BASE OFICIAIS (Catálogo Completo)
+// DADOS BASE OFICIAIS (Catálogo Completo com Links Diretos da Internet)
 const baseProdutos = [
     // --- BLADES ---
     { id: "1", nome: "Dran Sword", tipo: "Blade", condicao: "Nova", preco: 120, vendedor: "Oficial", imagem: "https://beyblade.takaratomy.co.jp/beyblade-x/img/product/dransword.png", descricao: "Blade de Ataque com 3 lâminas pesadas, focada em Upper Attack brutal." },
@@ -45,18 +45,19 @@ const baseProdutos = [
     { id: "69", nome: "Elevate (E)", tipo: "Bit", condicao: "Nova", preco: 50, vendedor: "Oficial", imagem: "https://cdn-icons-png.flaticon.com/512/3524/3524636.png", descricao: "Design único com suspensão/altura variável." }
 ];
 
-let produtos = JSON.parse(localStorage.getItem('bX_produtos_v7')) || baseProdutos;
-let carrinho = JSON.parse(localStorage.getItem('bX_carrinho_v7')) || [];
-let usuarioLogado = JSON.parse(localStorage.getItem('bX_user_v7')) || null;
-let transacoes = JSON.parse(localStorage.getItem('bX_transacoes_v7')) || []; 
+// O SEGREDO ESTÁ AQUI: V8! Isso reseta e carrega as imagens limpas e perfeitas.
+let produtos = JSON.parse(localStorage.getItem('bX_produtos_v8')) || baseProdutos;
+let carrinho = JSON.parse(localStorage.getItem('bX_carrinho_v8')) || [];
+let usuarioLogado = JSON.parse(localStorage.getItem('bX_user_v8')) || null;
+let transacoes = JSON.parse(localStorage.getItem('bX_transacoes_v8')) || []; 
 
 const pagina = document.getElementById('pagina');
 
 function salvarDados() {
-    localStorage.setItem('bX_produtos_v7', JSON.stringify(produtos));
-    localStorage.setItem('bX_carrinho_v7', JSON.stringify(carrinho));
-    localStorage.setItem('bX_user_v7', JSON.stringify(usuarioLogado));
-    localStorage.setItem('bX_transacoes_v7', JSON.stringify(transacoes));
+    localStorage.setItem('bX_produtos_v8', JSON.stringify(produtos));
+    localStorage.setItem('bX_carrinho_v8', JSON.stringify(carrinho));
+    localStorage.setItem('bX_user_v8', JSON.stringify(usuarioLogado));
+    localStorage.setItem('bX_transacoes_v8', JSON.stringify(transacoes));
     
     const qtdTotal = carrinho.reduce((acc, p) => acc + p.quantidade, 0);
     document.getElementById('cart-btn').innerText = `🛒 (${qtdTotal})`;
@@ -102,7 +103,7 @@ function catalogo() {
             ${baseProdutos.map(p => `
                 <div class="card">
                     <span class="badge-tipo">${escapeHTML(p.tipo)}</span>
-                    <img src="${escapeHTML(p.imagem)}" alt="${escapeHTML(p.nome)}" style="mix-blend-mode: screen;">
+                    <img src="${escapeHTML(p.imagem)}" alt="${escapeHTML(p.nome)}" style="mix-blend-mode: screen;" onerror="this.src='https://via.placeholder.com/150/111/fff?text=${escapeHTML(p.nome)}'">
                     <h3>${escapeHTML(p.nome)}</h3>
                     <p style="font-size:12px; color:#aaa; margin-bottom:5px;">Preço Sugerido</p>
                     <p class="preco" style="color:#aaa;">R$ ${p.preco.toFixed(2)}</p>
@@ -143,7 +144,7 @@ function marketplace(termo = "") {
             <div class="card" data-action="abrir-produto" data-nome="${escapeHTML(g.nomeExibicao)}">
                 <span class="badge-tipo">${escapeHTML(g.tipo)}</span>
                 <span class="badge-vendedor" style="background:var(--accent); color:#000;">${g.quantidade} OFERTAS</span>
-                <img src="${escapeHTML(g.imagem)}" alt="${escapeHTML(g.nomeExibicao)}" onerror="this.src='https://via.placeholder.com/150/111/fff?text=Peça'">
+                <img src="${escapeHTML(g.imagem)}" alt="${escapeHTML(g.nomeExibicao)}" onerror="this.src='https://via.placeholder.com/150/111/fff?text=${escapeHTML(g.nomeExibicao)}'">
                 <h3>${escapeHTML(g.nomeExibicao)}</h3>
                 <p style="font-size:12px; color:#aaa; margin-bottom:5px;">Valor Médio de Mercado</p>
                 <p class="preco" style="font-size: 24px;">R$ ${precoMedio.toFixed(2)}</p>
@@ -190,7 +191,7 @@ function abrirProduto(nomePeca) {
     pagina.innerHTML = `
         <div class="produto-detalhe">
             <div class="produto-img-container">
-                <img src="${escapeHTML(pOficial.imagem)}" alt="${escapeHTML(pOficial.nome)}" onerror="this.src='https://via.placeholder.com/300/111/fff?text=Peça+BEYX'">
+                <img src="${escapeHTML(pOficial.imagem)}" alt="${escapeHTML(pOficial.nome)}" onerror="this.src='https://via.placeholder.com/300/111/fff?text=${escapeHTML(pOficial.nome)}'">
             </div>
             <div class="produto-info">
                 <span class="badge-tipo" style="position:static; display:inline-block; margin-bottom:10px;">${escapeHTML(pOficial.tipo)}</span>
@@ -245,7 +246,7 @@ function abrirPerfil(abaAtiva = 'anuncios') {
                         </select>
                     </div>
                     <input type="number" id="v-preco" placeholder="Valor (R$)">
-                    <input type="text" id="v-img" placeholder="URL da Imagem (Opcional se já for peça oficial)">
+                    <input type="text" id="v-img" placeholder="URL da Imagem (Opcional se já for oficial)">
                     <textarea id="v-desc" placeholder="Descrição da sua peça..." rows="3"></textarea>
                     <button data-action="publicar">PUBLICAR ANÚNCIO</button>
                 </div>
@@ -362,7 +363,7 @@ function paginaCarrinho() {
             ${carrinho.map((p) => `
                 <div class="carrinho-item">
                     <div class="carrinho-item-info">
-                        <img src="${escapeHTML(p.imagem)}" width="50">
+                        <img src="${escapeHTML(p.imagem)}" width="50" onerror="this.src='https://via.placeholder.com/50'">
                         <div>
                             <strong>${escapeHTML(p.nome)}</strong> <span style="font-size:11px; color:#aaa;">(${escapeHTML(p.condicao)})</span><br>
                             <small>Vendido por: ${escapeHTML(p.vendedor)}</small>
@@ -524,6 +525,15 @@ document.addEventListener('click', (e) => {
 document.getElementById('input-busca').addEventListener('input', (e) => {
     marketplace(e.target.value);
 });
+
+// Tratamento especial para o erro de imagem padrão
+document.addEventListener('error', function (event) {
+    if (event.target.tagName.toLowerCase() === 'img') {
+        // Pega o alt text da imagem para colocar no placeholder
+        const altText = event.target.getAttribute('alt') || 'Peça';
+        event.target.src = `https://via.placeholder.com/150/111/fff?text=${encodeURIComponent(altText)}`;
+    }
+}, true);
 
 salvarDados();
 home();
