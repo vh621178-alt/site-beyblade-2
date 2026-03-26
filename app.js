@@ -1,63 +1,159 @@
-// DADOS BASE OFICIAIS (Catálogo Completo com Links Diretos da Internet)
+// DADOS BASE OFICIAIS (O Mega Catálogo Beyblade X - Atualizado)
 const baseProdutos = [
-    // --- BLADES ---
-    { id: "1", nome: "Dran Sword", tipo: "Blade", condicao: "Nova", preco: 120, vendedor: "Oficial", imagem: "https://beyblade.takaratomy.co.jp/beyblade-x/img/product/dransword.png", descricao: "Blade de Ataque com 3 lâminas pesadas, focada em Upper Attack brutal." },
-    { id: "2", nome: "Hells Scythe", tipo: "Blade", condicao: "Nova", preco: 115, vendedor: "Oficial", imagem: "https://beyblade.takaratomy.co.jp/beyblade-x/img/product/hellsscythe.png", descricao: "Equilíbrio perfeito com 4 lâminas. Excelente em desestabilizar oponentes." },
-    { id: "3", nome: "Wizard Arrow", tipo: "Blade", condicao: "Nova", preco: 110, vendedor: "Oficial", imagem: "https://beyblade.takaratomy.co.jp/beyblade-x/img/product/wizardarrow.png", descricao: "Foco total em Resistência (Stamina). Alta força centrífuga devido ao formato circular." },
-    { id: "4", nome: "Knight Shield", tipo: "Blade", condicao: "Nova", preco: 110, vendedor: "Oficial", imagem: "https://beyblade.takaratomy.co.jp/beyblade-x/img/product/knightshield.png", descricao: "Defesa com 6 pontos de impacto projetados para absorver e repelir ataques." },
-    { id: "5", nome: "Knight Lance", tipo: "Blade", condicao: "Nova", preco: 115, vendedor: "Oficial", imagem: "https://beyblade.takaratomy.co.jp/beyblade-x/img/product/knightlance.png", descricao: "Blade de Defesa focada em contra-ataques (Counter) com formato assimétrico." },
-    { id: "6", nome: "Viper Tail", tipo: "Blade", condicao: "Nova", preco: 120, vendedor: "Oficial", imagem: "https://beyblade.takaratomy.co.jp/beyblade-x/img/product/vipertail.png", descricao: "Blade de Resistência com lâminas voltadas para baixo para atacar por cima (Smash Attack)." },
-    { id: "7", nome: "Leon Claw", tipo: "Blade", condicao: "Nova", preco: 125, vendedor: "Oficial", imagem: "https://beyblade.takaratomy.co.jp/beyblade-x/img/product/leonclaw.png", descricao: "Blade de Equilíbrio que muda de comportamento dependendo do lançamento." },
-    { id: "8", nome: "Rhino Horn", tipo: "Blade", condicao: "Nova", preco: 110, vendedor: "Oficial", imagem: "https://beyblade.takaratomy.co.jp/beyblade-x/img/product/rhinohorn.png", descricao: "Blade compacta de Defesa pesada, difícil de ser jogada para fora da arena." },
-    { id: "9", nome: "Phoenix Wing", tipo: "Blade", condicao: "Nova", preco: 160, vendedor: "Oficial", imagem: "https://beyblade.takaratomy.co.jp/beyblade-x/img/product/phoenixwing.png", descricao: "Poder massivo! Blade pintada pesada e devastadora da geração X." },
-    { id: "10", nome: "Wyvern Gale", tipo: "Blade", condicao: "Nova", preco: 120, vendedor: "Oficial", imagem: "https://beyblade.takaratomy.co.jp/beyblade-x/img/product/wyverngale.png", descricao: "Resistência aerodinâmica com 4 lâminas fluidas para cortar o ar." },
-    { id: "11", nome: "Unicorn Sting", tipo: "Blade", condicao: "Nova", preco: 125, vendedor: "Oficial", imagem: "https://beyblade.takaratomy.co.jp/beyblade-x/img/product/unicornsting.png", descricao: "Equilíbrio assimétrico! Um lado ataca, o outro defende." },
-    { id: "12", nome: "Dran Dagger", tipo: "Blade", condicao: "Nova", preco: 130, vendedor: "Oficial", imagem: "https://beyblade.takaratomy.co.jp/beyblade-x/img/product/drandagger.png", descricao: "Ataque rápido de múltiplos acertos com 6 micro-lâminas agressivas." },
-    { id: "13", nome: "Hells Chain", tipo: "Blade", condicao: "Nova", preco: 130, vendedor: "Oficial", imagem: "https://beyblade.takaratomy.co.jp/beyblade-x/img/product/hellschain.png", descricao: "Equilíbrio defensivo. Alterne entre lâminas altas e baixas dependendo da montagem." },
-    { id: "14", nome: "Sphinx Cowl", tipo: "Blade", condicao: "Nova", preco: 115, vendedor: "Oficial", imagem: "https://beyblade.takaratomy.co.jp/beyblade-x/img/product/sphinxcowl.png", descricao: "Defesa implacável com lâminas grossas para repelir golpes consecutivos." },
-    { id: "15", nome: "Dran Buster", tipo: "Blade", condicao: "Nova", preco: 140, vendedor: "Oficial", imagem: "https://beyblade.takaratomy.co.jp/beyblade-x/img/product/dranbuster.png", descricao: "Linha UX (Unique Line). Foco extremo em um único ponto de impacto gigante para One-Hit KO." },
-    { id: "16", nome: "Hells Hammer", tipo: "Blade", condicao: "Nova", preco: 140, vendedor: "Oficial", imagem: "https://beyblade.takaratomy.co.jp/beyblade-x/img/product/hellshammer.png", descricao: "Linha UX. Três lâminas quadradas para esmagar os adversários de cima para baixo (Smash)." },
-    { id: "17", nome: "Wizard Rod", tipo: "Blade", condicao: "Nova", preco: 150, vendedor: "Oficial", imagem: "https://beyblade.takaratomy.co.jp/beyblade-x/img/product/wizardrod.png", descricao: "Linha UX. A deusa da Resistência. Peso distribuído perfeitamente nas bordas para giro eterno." },
-    { id: "18", nome: "Tyranno Beat", tipo: "Blade", condicao: "Nova", preco: 145, vendedor: "Oficial", imagem: "https://beyblade.takaratomy.co.jp/beyblade-x/img/product/tyrannobeat.png", descricao: "Ataque focado em ricochetes severos e agressividade descontrolada." },
-    { id: "19", nome: "Cobalt Dragoon", tipo: "Blade", condicao: "Nova", preco: 170, vendedor: "Oficial", imagem: "https://beyblade.takaratomy.co.jp/beyblade-x/img/product/cobaltdragoon.png", descricao: "O primeiro Beyblade X de Rotação à Esquerda (Left Spin). Extremamente agressivo." },
-    { id: "20", nome: "Weiss Tiger", tipo: "Blade", condicao: "Nova", preco: 135, vendedor: "Oficial", imagem: "https://beyblade.takaratomy.co.jp/beyblade-x/img/product/weisstiger.png", descricao: "Equilíbrio feroz, transita entre ataque contínuo e evasão." },
-    { id: "21", nome: "Black Shell", tipo: "Blade", condicao: "Nova", preco: 130, vendedor: "Oficial", imagem: "https://beyblade.takaratomy.co.jp/beyblade-x/img/product/blackshell.png", descricao: "Uma fortaleza de Defesa. Difícil de ser desestabilizado graças ao centro de gravidade." },
+    // === BLADES ===
+    { id: "B01", nome: "Aero Pegasus", tipo: "Blade", condicao: "Nova", preco: 160, vendedor: "Oficial", imagem: "https://via.placeholder.com/150/111/fff?text=Aero+Pegasus", descricao: "Blade de ataque aerodinâmico." },
+    { id: "B02", nome: "Bear Scratch", tipo: "Blade", condicao: "Nova", preco: 120, vendedor: "Oficial", imagem: "https://via.placeholder.com/150/111/fff?text=Bear+Scratch", descricao: "Ataque pesado e focado em arrasto." },
+    { id: "B03", nome: "Black Shell", tipo: "Blade", condicao: "Nova", preco: 130, vendedor: "Oficial", imagem: "https://beyblade.takaratomy.co.jp/beyblade-x/img/product/blackshell.png", descricao: "Uma fortaleza de Defesa. Difícil de ser desestabilizado." },
+    { id: "B04", nome: "Cobalt Dragoon", tipo: "Blade", condicao: "Nova", preco: 170, vendedor: "Oficial", imagem: "https://beyblade.takaratomy.co.jp/beyblade-x/img/product/cobaltdragoon.png", descricao: "Primeiro Beyblade de Rotação à Esquerda (Left Spin)." },
+    { id: "B05", nome: "Cobalt Drake", tipo: "Blade", condicao: "Nova", preco: 350, vendedor: "Oficial", imagem: "https://via.placeholder.com/150/111/fff?text=Cobalt+Drake", descricao: "Raridade extrema (Rare Get). Peso e ataque absurdos." },
+    { id: "B06", nome: "Crimson Garuda", tipo: "Blade", condicao: "Nova", preco: 145, vendedor: "Oficial", imagem: "https://via.placeholder.com/150/111/fff?text=Crimson+Garuda", descricao: "Resistência com foco em evasão aérea." },
+    { id: "B07", nome: "Croco Crunch", tipo: "Blade", condicao: "Nova", preco: 125, vendedor: "Oficial", imagem: "https://via.placeholder.com/150/111/fff?text=Croco+Crunch", descricao: "Mordida fatal com lâminas duplas focadas em esmagamento." },
+    { id: "B08", nome: "Draciel Shield", tipo: "Blade", condicao: "Nova", preco: 140, vendedor: "Oficial", imagem: "https://via.placeholder.com/150/111/fff?text=Draciel+Shield", descricao: "Remake nostálgico. Defesa pura baseada na Fera Bit de Tartaruga." },
+    { id: "B09", nome: "Dragoon Storm", tipo: "Blade", condicao: "Nova", preco: 140, vendedor: "Oficial", imagem: "https://via.placeholder.com/150/111/fff?text=Dragoon+Storm", descricao: "Remake clássico. Ataque brutal com rotação à esquerda." },
+    { id: "B10", nome: "Dran Buster", tipo: "Blade", condicao: "Nova", preco: 140, vendedor: "Oficial", imagem: "https://beyblade.takaratomy.co.jp/beyblade-x/img/product/dranbuster.png", descricao: "Linha UX. Foco extremo em um único ponto de impacto gigante." },
+    { id: "B11", nome: "Dran Dagger", tipo: "Blade", condicao: "Nova", preco: 130, vendedor: "Oficial", imagem: "https://beyblade.takaratomy.co.jp/beyblade-x/img/product/drandagger.png", descricao: "Ataque rápido de múltiplos acertos com 6 micro-lâminas." },
+    { id: "B12", nome: "Dran Sword", tipo: "Blade", condicao: "Nova", preco: 120, vendedor: "Oficial", imagem: "https://beyblade.takaratomy.co.jp/beyblade-x/img/product/dransword.png", descricao: "Ataque com 3 lâminas pesadas, focada em Upper Attack." },
+    { id: "B13", nome: "Dranzer Spiral", tipo: "Blade", condicao: "Nova", preco: 135, vendedor: "Oficial", imagem: "https://via.placeholder.com/150/111/fff?text=Dranzer+Spiral", descricao: "Remake. Equilíbrio de ataque rápido e agilidade." },
+    { id: "B14", nome: "Driger Slash", tipo: "Blade", condicao: "Nova", preco: 135, vendedor: "Oficial", imagem: "https://via.placeholder.com/150/111/fff?text=Driger+Slash", descricao: "Remake. Lâminas cortantes focadas em ataques laterais." },
+    { id: "B15", nome: "Ghost Circle", tipo: "Blade", condicao: "Nova", preco: 130, vendedor: "Oficial", imagem: "https://via.placeholder.com/150/111/fff?text=Ghost+Circle", descricao: "Resistência circular quase perfeita. Difícil de agarrar." },
+    { id: "B16", nome: "Golem Rock", tipo: "Blade", condicao: "Nova", preco: 125, vendedor: "Oficial", imagem: "https://via.placeholder.com/150/111/fff?text=Golem+Rock", descricao: "Resistência a nocaute com design massivo e sólido." },
+    { id: "B17", nome: "Hells Chain", tipo: "Blade", condicao: "Nova", preco: 130, vendedor: "Oficial", imagem: "https://beyblade.takaratomy.co.jp/beyblade-x/img/product/hellschain.png", descricao: "Equilíbrio defensivo. Lâminas altas e baixas." },
+    { id: "B18", nome: "Hells Hammer", tipo: "Blade", condicao: "Nova", preco: 140, vendedor: "Oficial", imagem: "https://beyblade.takaratomy.co.jp/beyblade-x/img/product/hellshammer.png", descricao: "Linha UX. Três lâminas quadradas para esmagamento (Smash)." },
+    { id: "B19", nome: "Hells Scythe", tipo: "Blade", condicao: "Nova", preco: 115, vendedor: "Oficial", imagem: "https://beyblade.takaratomy.co.jp/beyblade-x/img/product/hellsscythe.png", descricao: "Equilíbrio perfeito. Desestabiliza oponentes." },
+    { id: "B20", nome: "Impact Drake", tipo: "Blade", condicao: "Nova", preco: 155, vendedor: "Oficial", imagem: "https://via.placeholder.com/150/111/fff?text=Impact+Drake", descricao: "Poder de ataque explosivo focado em contato direto." },
+    { id: "B21", nome: "Knight Lance", tipo: "Blade", condicao: "Nova", preco: 115, vendedor: "Oficial", imagem: "https://beyblade.takaratomy.co.jp/beyblade-x/img/product/knightlance.png", descricao: "Defesa focada em contra-ataques com formato assimétrico." },
+    { id: "B22", nome: "Knight Mail", tipo: "Blade", condicao: "Nova", preco: 130, vendedor: "Oficial", imagem: "https://via.placeholder.com/150/111/fff?text=Knight+Mail", descricao: "Armadura completa. Defesa passiva contra ataques cortantes." },
+    { id: "B23", nome: "Knight Shield", tipo: "Blade", condicao: "Nova", preco: 110, vendedor: "Oficial", imagem: "https://beyblade.takaratomy.co.jp/beyblade-x/img/product/knightshield.png", descricao: "Defesa com 6 pontos de impacto projetados para repelir." },
+    { id: "B24", nome: "Leon Claw", tipo: "Blade", condicao: "Nova", preco: 125, vendedor: "Oficial", imagem: "https://beyblade.takaratomy.co.jp/beyblade-x/img/product/leonclaw.png", descricao: "Equilíbrio agressivo inspirado em garras felinas." },
+    { id: "B25", nome: "Leon Crest", tipo: "Blade", condicao: "Nova", preco: 135, vendedor: "Oficial", imagem: "https://via.placeholder.com/150/111/fff?text=Leon+Crest", descricao: "Evolução do Leon Claw. Maior distribuição centrífuga." },
+    { id: "B26", nome: "Lightning L-Drago (Rapid-Hit)", tipo: "Blade", condicao: "Nova", preco: 160, vendedor: "Oficial", imagem: "https://via.placeholder.com/150/111/fff?text=L-Drago+Rapid", descricao: "Remake de Metal Fight. Foco em ataques rápidos à esquerda." },
+    { id: "B27", nome: "Lightning L-Drago (Upper)", tipo: "Blade", condicao: "Nova", preco: 160, vendedor: "Oficial", imagem: "https://via.placeholder.com/150/111/fff?text=L-Drago+Upper", descricao: "Remake de Metal Fight. Foco em Upper Attacks violentos." },
+    { id: "B28", nome: "Mammoth Tusk", tipo: "Blade", condicao: "Nova", preco: 125, vendedor: "Oficial", imagem: "https://via.placeholder.com/150/111/fff?text=Mammoth+Tusk", descricao: "Ataque com formato oval para golpes irregulares." },
+    { id: "B29", nome: "Phoenix Feather", tipo: "Blade", condicao: "Nova", preco: 110, vendedor: "Oficial", imagem: "https://via.placeholder.com/150/111/fff?text=Phoenix+Feather", descricao: "Ataque veloz e leve, focado na Xtreme Line." },
+    { id: "B30", nome: "Phoenix Rudder", tipo: "Blade", condicao: "Nova", preco: 145, vendedor: "Oficial", imagem: "https://via.placeholder.com/150/111/fff?text=Phoenix+Rudder", descricao: "Resistência aerodinâmica com excelente tempo de giro." },
+    { id: "B31", nome: "Phoenix Wing", tipo: "Blade", condicao: "Nova", preco: 160, vendedor: "Oficial", imagem: "https://beyblade.takaratomy.co.jp/beyblade-x/img/product/phoenixwing.png", descricao: "Lâmina super pesada pintada. Devastadora." },
+    { id: "B32", nome: "Ptera Swing", tipo: "Blade", condicao: "Nova", preco: 120, vendedor: "Oficial", imagem: "https://via.placeholder.com/150/111/fff?text=Ptera+Swing", descricao: "Ataque lateral focado em varredura." },
+    { id: "B33", nome: "Rhino Horn", tipo: "Blade", condicao: "Nova", preco: 110, vendedor: "Oficial", imagem: "https://beyblade.takaratomy.co.jp/beyblade-x/img/product/rhinohorn.png", descricao: "Defesa compacta, difícil de ser expulsa da arena." },
+    { id: "B34", nome: "Roar Tyranno", tipo: "Blade", condicao: "Nova", preco: 130, vendedor: "Oficial", imagem: "https://via.placeholder.com/150/111/fff?text=Roar+Tyranno", descricao: "Ataque predatório pesado." },
+    { id: "B35", nome: "Samurai Saber", tipo: "Blade", condicao: "Nova", preco: 155, vendedor: "Oficial", imagem: "https://via.placeholder.com/150/111/fff?text=Samurai+Saber", descricao: "Cortes limpos de alta precisão." },
+    { id: "B36", nome: "Samurai Steel", tipo: "Blade", condicao: "Nova", preco: 150, vendedor: "Oficial", imagem: "https://via.placeholder.com/150/111/fff?text=Samurai+Steel", descricao: "Defesa laminada capaz de desviar impactos frontais." },
+    { id: "B37", nome: "Scorpio Spear", tipo: "Blade", condicao: "Nova", preco: 120, vendedor: "Oficial", imagem: "https://via.placeholder.com/150/111/fff?text=Scorpio+Spear", descricao: "Ataque pontual e venenoso contra a resistência inimiga." },
+    { id: "B38", nome: "Shark Edge", tipo: "Blade", condicao: "Nova", preco: 135, vendedor: "Oficial", imagem: "https://via.placeholder.com/150/111/fff?text=Shark+Edge", descricao: "Upper Attack extremo, projetado para Burst." },
+    { id: "B39", nome: "Shelter Drake", tipo: "Blade", condicao: "Nova", preco: 140, vendedor: "Oficial", imagem: "https://via.placeholder.com/150/111/fff?text=Shelter+Drake", descricao: "Defesa dracônica super blindada." },
+    { id: "B40", nome: "Shinobi Knife", tipo: "Blade", condicao: "Nova", preco: 125, vendedor: "Oficial", imagem: "https://via.placeholder.com/150/111/fff?text=Shinobi+Knife", descricao: "Ataque furtivo, bordas invisíveis durante o giro." },
+    { id: "B41", nome: "Shinobi Shadow", tipo: "Blade", condicao: "Nova", preco: 130, vendedor: "Oficial", imagem: "https://via.placeholder.com/150/111/fff?text=Shinobi+Shadow", descricao: "Evasão de alta velocidade. Resistência focada em esquiva." },
+    { id: "B42", nome: "Silver Wolf", tipo: "Blade", condicao: "Nova", preco: 140, vendedor: "Oficial", imagem: "https://via.placeholder.com/150/111/fff?text=Silver+Wolf", descricao: "Resistência robusta para o late-game." },
+    { id: "B43", nome: "Sphinx Cowl", tipo: "Blade", condicao: "Nova", preco: 115, vendedor: "Oficial", imagem: "https://beyblade.takaratomy.co.jp/beyblade-x/img/product/sphinxcowl.png", descricao: "Defesa implacável para repelir golpes consecutivos." },
+    { id: "B44", nome: "Storm Pegasis", tipo: "Blade", condicao: "Nova", preco: 165, vendedor: "Oficial", imagem: "https://via.placeholder.com/150/111/fff?text=Storm+Pegasis", descricao: "Remake Metal Fight. A lenda do Upper Attack veloz." },
+    { id: "B45", nome: "Tricera Press", tipo: "Blade", condicao: "Nova", preco: 125, vendedor: "Oficial", imagem: "https://via.placeholder.com/150/111/fff?text=Tricera+Press", descricao: "Ataque pesado frontal com 3 chifres massivos." },
+    { id: "B46", nome: "Tyranno Beat", tipo: "Blade", condicao: "Nova", preco: 145, vendedor: "Oficial", imagem: "https://beyblade.takaratomy.co.jp/beyblade-x/img/product/tyrannobeat.png", descricao: "Ricochetes severos e agressividade descontrolada." },
+    { id: "B47", nome: "Unicorn Sting", tipo: "Blade", condicao: "Nova", preco: 125, vendedor: "Oficial", imagem: "https://beyblade.takaratomy.co.jp/beyblade-x/img/product/unicornsting.png", descricao: "Equilíbrio assimétrico! Um lado ataca, o outro defende." },
+    { id: "B48", nome: "Victory Valkyrie", tipo: "Blade", condicao: "Nova", preco: 160, vendedor: "Oficial", imagem: "https://via.placeholder.com/150/111/fff?text=Victory+Valkyrie", descricao: "Remake Burst. As icônicas três lâminas de ataque letal." },
+    { id: "B49", nome: "Viper Tail", tipo: "Blade", condicao: "Nova", preco: 120, vendedor: "Oficial", imagem: "https://beyblade.takaratomy.co.jp/beyblade-x/img/product/vipertail.png", descricao: "Lâminas voltadas para baixo para atacar por cima (Smash)." },
+    { id: "B50", nome: "Weiss Tiger", tipo: "Blade", condicao: "Nova", preco: 135, vendedor: "Oficial", imagem: "https://beyblade.takaratomy.co.jp/beyblade-x/img/product/weisstiger.png", descricao: "Transita perfeitamente entre ataque contínuo e evasão." },
+    { id: "B51", nome: "Whale Wave", tipo: "Blade", condicao: "Nova", preco: 150, vendedor: "Oficial", imagem: "https://via.placeholder.com/150/111/fff?text=Whale+Wave", descricao: "Peso colossal para afundar a defesa do oponente." },
+    { id: "B52", nome: "Wizard Arrow", tipo: "Blade", condicao: "Nova", preco: 110, vendedor: "Oficial", imagem: "https://beyblade.takaratomy.co.jp/beyblade-x/img/product/wizardarrow.png", descricao: "Resistência circular clássica e de alta duração." },
+    { id: "B53", nome: "Wizard Rod", tipo: "Blade", condicao: "Nova", preco: 150, vendedor: "Oficial", imagem: "https://beyblade.takaratomy.co.jp/beyblade-x/img/product/wizardrod.png", descricao: "Linha UX. A rainha do meta atual de Resistência." },
+    { id: "B54", nome: "Wyvern Gale", tipo: "Blade", condicao: "Nova", preco: 120, vendedor: "Oficial", imagem: "https://beyblade.takaratomy.co.jp/beyblade-x/img/product/wyverngale.png", descricao: "Resistência com design aerodinâmico corta-vento." },
+    { id: "B55", nome: "Xeno Xcalibur", tipo: "Blade", condicao: "Nova", preco: 155, vendedor: "Oficial", imagem: "https://via.placeholder.com/150/111/fff?text=Xeno+Xcalibur", descricao: "Remake Burst. O impacto insano de uma única espada pesada." },
+    { id: "B56", nome: "Yell Kong", tipo: "Blade", condicao: "Nova", preco: 130, vendedor: "Oficial", imagem: "https://via.placeholder.com/150/111/fff?text=Yell+Kong", descricao: "Controle e defesa brutos." },
 
-    // --- RATCHETS ---
-    { id: "40", nome: "3-60", tipo: "Ratchet", condicao: "Nova", preco: 45, vendedor: "Oficial", imagem: "https://cdn-icons-png.flaticon.com/512/2099/2099058.png", descricao: "Altura média (60), 3 pontos de impacto. Altamente popular para Ataque." },
-    { id: "41", nome: "4-60", tipo: "Ratchet", condicao: "Nova", preco: 45, vendedor: "Oficial", imagem: "https://cdn-icons-png.flaticon.com/512/2099/2099058.png", descricao: "Altura média (60), 4 pontos de impacto." },
-    { id: "42", nome: "5-60", tipo: "Ratchet", condicao: "Nova", preco: 50, vendedor: "Oficial", imagem: "https://cdn-icons-png.flaticon.com/512/2099/2099058.png", descricao: "Altura média (60), 5 pontos de impacto. Muito usado para Resistência." },
-    { id: "43", nome: "9-60", tipo: "Ratchet", condicao: "Nova", preco: 60, vendedor: "Oficial", imagem: "https://cdn-icons-png.flaticon.com/512/2099/2099058.png", descricao: "A defesa suprema. 9 pontos de impacto tornam este Ratchet incrivelmente seguro contra Burst." },
-    { id: "44", nome: "3-80", tipo: "Ratchet", condicao: "Nova", preco: 45, vendedor: "Oficial", imagem: "https://cdn-icons-png.flaticon.com/512/2099/2099084.png", descricao: "Perfil alto (80), 3 pontos. Bom para ataques esmagadores de cima para baixo." },
-    { id: "45", nome: "5-80", tipo: "Ratchet", condicao: "Nova", preco: 50, vendedor: "Oficial", imagem: "https://cdn-icons-png.flaticon.com/512/2099/2099084.png", descricao: "Perfil alto (80), 5 pontos. Bom balanço geral." },
-    { id: "46", nome: "1-60", tipo: "Ratchet", condicao: "Nova", preco: 55, vendedor: "Oficial", imagem: "https://cdn-icons-png.flaticon.com/512/2099/2099058.png", descricao: "Possui apenas 1 ponto massivo de impacto. Causa alto desequilíbrio, mas bate forte." },
+    // === RATCHETS ===
+    { id: "R01", nome: "0-70", tipo: "Ratchet", condicao: "Nova", preco: 50, vendedor: "Oficial", imagem: "https://cdn-icons-png.flaticon.com/512/2099/2099084.png", descricao: "Altura 70, sem pontos de contato para evitar Burst." },
+    { id: "R02", nome: "0-80", tipo: "Ratchet", condicao: "Nova", preco: 50, vendedor: "Oficial", imagem: "https://cdn-icons-png.flaticon.com/512/2099/2099084.png", descricao: "Altura 80, extremamente liso, feito para defesa de longo alcance." },
+    { id: "R03", nome: "1-50", tipo: "Ratchet", condicao: "Nova", preco: 60, vendedor: "Oficial", imagem: "https://cdn-icons-png.flaticon.com/512/2099/2099058.png", descricao: "Ultra baixo, apenas um ponto de foco massivo." },
+    { id: "R04", nome: "1-60", tipo: "Ratchet", condicao: "Nova", preco: 55, vendedor: "Oficial", imagem: "https://cdn-icons-png.flaticon.com/512/2099/2099058.png", descricao: "Altura média, desbalanceado para ataques críticos." },
+    { id: "R05", nome: "1-70", tipo: "Ratchet", condicao: "Nova", preco: 50, vendedor: "Oficial", imagem: "https://cdn-icons-png.flaticon.com/512/2099/2099084.png", descricao: "1 ponto, altura 70." },
+    { id: "R06", nome: "1-80", tipo: "Ratchet", condicao: "Nova", preco: 50, vendedor: "Oficial", imagem: "https://cdn-icons-png.flaticon.com/512/2099/2099084.png", descricao: "1 ponto, altura 80." },
+    { id: "R07", nome: "2-60", tipo: "Ratchet", condicao: "Nova", preco: 45, vendedor: "Oficial", imagem: "https://cdn-icons-png.flaticon.com/512/2099/2099058.png", descricao: "2 pontos de contato paralelos, altura 60." },
+    { id: "R08", nome: "2-70", tipo: "Ratchet", condicao: "Nova", preco: 45, vendedor: "Oficial", imagem: "https://cdn-icons-png.flaticon.com/512/2099/2099084.png", descricao: "2 pontos, altura 70." },
+    { id: "R09", nome: "2-80", tipo: "Ratchet", condicao: "Nova", preco: 45, vendedor: "Oficial", imagem: "https://cdn-icons-png.flaticon.com/512/2099/2099084.png", descricao: "2 pontos, altura 80." },
+    { id: "R10", nome: "3-60", tipo: "Ratchet", condicao: "Nova", preco: 45, vendedor: "Oficial", imagem: "https://cdn-icons-png.flaticon.com/512/2099/2099058.png", descricao: "O clássico do ataque agressivo. 3 pontos, altura 60." },
+    { id: "R11", nome: "3-70", tipo: "Ratchet", condicao: "Nova", preco: 45, vendedor: "Oficial", imagem: "https://cdn-icons-png.flaticon.com/512/2099/2099084.png", descricao: "3 pontos, altura intermediária 70." },
+    { id: "R12", nome: "3-80", tipo: "Ratchet", condicao: "Nova", preco: 45, vendedor: "Oficial", imagem: "https://cdn-icons-png.flaticon.com/512/2099/2099084.png", descricao: "3 pontos de impacto de cima para baixo. Altura 80." },
+    { id: "R13", nome: "3-85", tipo: "Ratchet", condicao: "Nova", preco: 50, vendedor: "Oficial", imagem: "https://cdn-icons-png.flaticon.com/512/2099/2099084.png", descricao: "O mais alto dos 3 pontos. Altura 85." },
+    { id: "R14", nome: "4-50", tipo: "Ratchet", condicao: "Nova", preco: 55, vendedor: "Oficial", imagem: "https://cdn-icons-png.flaticon.com/512/2099/2099058.png", descricao: "4 pontos, perfil ultra baixo para proteção máxima." },
+    { id: "R15", nome: "4-55", tipo: "Ratchet", condicao: "Nova", preco: 55, vendedor: "Oficial", imagem: "https://cdn-icons-png.flaticon.com/512/2099/2099058.png", descricao: "4 pontos, altura 55." },
+    { id: "R16", nome: "4-60", tipo: "Ratchet", condicao: "Nova", preco: 45, vendedor: "Oficial", imagem: "https://cdn-icons-png.flaticon.com/512/2099/2099058.png", descricao: "4 pontos equilibrados, altura 60." },
+    { id: "R17", nome: "4-70", tipo: "Ratchet", condicao: "Nova", preco: 45, vendedor: "Oficial", imagem: "https://cdn-icons-png.flaticon.com/512/2099/2099084.png", descricao: "4 pontos, altura 70." },
+    { id: "R18", nome: "4-80", tipo: "Ratchet", condicao: "Nova", preco: 45, vendedor: "Oficial", imagem: "https://cdn-icons-png.flaticon.com/512/2099/2099084.png", descricao: "4 pontos, altura 80." },
+    { id: "R19", nome: "5-60", tipo: "Ratchet", condicao: "Nova", preco: 50, vendedor: "Oficial", imagem: "https://cdn-icons-png.flaticon.com/512/2099/2099058.png", descricao: "5 pontos, super popular para setups de Resistência por ser redondo." },
+    { id: "R20", nome: "5-70", tipo: "Ratchet", condicao: "Nova", preco: 50, vendedor: "Oficial", imagem: "https://cdn-icons-png.flaticon.com/512/2099/2099084.png", descricao: "5 pontos, altura 70." },
+    { id: "R21", nome: "5-80", tipo: "Ratchet", condicao: "Nova", preco: 50, vendedor: "Oficial", imagem: "https://cdn-icons-png.flaticon.com/512/2099/2099084.png", descricao: "5 pontos, excelente balanço, altura 80." },
+    { id: "R22", nome: "6-60", tipo: "Ratchet", condicao: "Nova", preco: 55, vendedor: "Oficial", imagem: "https://cdn-icons-png.flaticon.com/512/2099/2099058.png", descricao: "6 pontos focados em repelir impactos." },
+    { id: "R23", nome: "6-70", tipo: "Ratchet", condicao: "Nova", preco: 55, vendedor: "Oficial", imagem: "https://cdn-icons-png.flaticon.com/512/2099/2099084.png", descricao: "6 pontos, altura 70." },
+    { id: "R24", nome: "6-80", tipo: "Ratchet", condicao: "Nova", preco: 55, vendedor: "Oficial", imagem: "https://cdn-icons-png.flaticon.com/512/2099/2099084.png", descricao: "6 pontos, altura 80." },
+    { id: "R25", nome: "7-55", tipo: "Ratchet", condicao: "Nova", preco: 60, vendedor: "Oficial", imagem: "https://cdn-icons-png.flaticon.com/512/2099/2099058.png", descricao: "7 pontos de dispersão, perfil baixo para absorção pura." },
+    { id: "R26", nome: "7-60", tipo: "Ratchet", condicao: "Nova", preco: 60, vendedor: "Oficial", imagem: "https://cdn-icons-png.flaticon.com/512/2099/2099058.png", descricao: "7 pontos, altura 60." },
+    { id: "R27", nome: "7-70", tipo: "Ratchet", condicao: "Nova", preco: 60, vendedor: "Oficial", imagem: "https://cdn-icons-png.flaticon.com/512/2099/2099084.png", descricao: "7 pontos, altura 70." },
+    { id: "R28", nome: "7-80", tipo: "Ratchet", condicao: "Nova", preco: 60, vendedor: "Oficial", imagem: "https://cdn-icons-png.flaticon.com/512/2099/2099084.png", descricao: "7 pontos, altura 80." },
+    { id: "R29", nome: "8-70", tipo: "Ratchet", condicao: "Nova", preco: 60, vendedor: "Oficial", imagem: "https://cdn-icons-png.flaticon.com/512/2099/2099084.png", descricao: "Formato octogonal raro, altura 70." },
+    { id: "R30", nome: "9-60", tipo: "Ratchet", condicao: "Nova", preco: 65, vendedor: "Oficial", imagem: "https://cdn-icons-png.flaticon.com/512/2099/2099058.png", descricao: "O rei da defesa contra Burst. 9 minúsculos pontos que impedem o engate inimigo." },
+    { id: "R31", nome: "9-65", tipo: "Ratchet", condicao: "Nova", preco: 65, vendedor: "Oficial", imagem: "https://cdn-icons-png.flaticon.com/512/2099/2099084.png", descricao: "9 pontos, altura intermediária 65." },
+    { id: "R32", nome: "9-70", tipo: "Ratchet", condicao: "Nova", preco: 65, vendedor: "Oficial", imagem: "https://cdn-icons-png.flaticon.com/512/2099/2099084.png", descricao: "9 pontos, altura 70." },
+    { id: "R33", nome: "9-80", tipo: "Ratchet", condicao: "Nova", preco: 65, vendedor: "Oficial", imagem: "https://cdn-icons-png.flaticon.com/512/2099/2099084.png", descricao: "9 pontos, altura 80." },
+    { id: "R34", nome: "M-85", tipo: "Ratchet", condicao: "Nova", preco: 70, vendedor: "Oficial", imagem: "https://cdn-icons-png.flaticon.com/512/2099/2099084.png", descricao: "Metal Ratchet. Extra pesado, altura 85." },
 
-    // --- BITS ---
-    { id: "60", nome: "Flat (F)", tipo: "Bit", condicao: "Nova", preco: 35, vendedor: "Oficial", imagem: "https://cdn-icons-png.flaticon.com/512/3524/3524636.png", descricao: "Ponta plana padrão. Acelera intensamente no Xtreme Dash." },
-    { id: "61", nome: "Taper (T)", tipo: "Bit", condicao: "Nova", preco: 35, vendedor: "Oficial", imagem: "https://cdn-icons-png.flaticon.com/512/3524/3524636.png", descricao: "Ponta levemente angulada. Mantém bom ataque com mais facilidade de controle que a Flat." },
-    { id: "62", nome: "Ball (B)", tipo: "Bit", condicao: "Nova", preco: 40, vendedor: "Oficial", imagem: "https://cdn-icons-png.flaticon.com/512/1046/1046274.png", descricao: "Esférica. O melhor Bit para Resistência pura. Mantém o centro da arena facilmente." },
-    { id: "63", nome: "Needle (N)", tipo: "Bit", condicao: "Nova", preco: 35, vendedor: "Oficial", imagem: "https://cdn-icons-png.flaticon.com/512/6532/6532840.png", descricao: "Agulha pontiaguda. Muito defensiva, inclina no impacto para devolver a força." },
-    { id: "64", nome: "Gear Flat (GF)", tipo: "Bit", condicao: "Nova", preco: 45, vendedor: "Oficial", imagem: "https://cdn-icons-png.flaticon.com/512/3524/3524636.png", descricao: "Ataque Extremo! As engrenagens vão até a ponta para grudar no Xtreme Line." },
-    { id: "65", nome: "Point (P)", tipo: "Bit", condicao: "Nova", preco: 40, vendedor: "Oficial", imagem: "https://cdn-icons-png.flaticon.com/512/6532/6532840.png", descricao: "Equilíbrio incrível. Uma micro-agulha no meio de uma ponta plana." },
-    { id: "66", nome: "Orb (O)", tipo: "Bit", condicao: "Nova", preco: 40, vendedor: "Oficial", imagem: "https://cdn-icons-png.flaticon.com/512/1046/1046274.png", descricao: "Uma esfera perfeita. Muito similar a Ball, porém com recuperação diferente." },
-    { id: "67", nome: "Hexa (H)", tipo: "Bit", condicao: "Nova", preco: 50, vendedor: "Oficial", imagem: "https://cdn-icons-png.flaticon.com/512/1046/1046274.png", descricao: "Um hexágono massivo. Incrível defesa e resistência a nocaute." },
-    { id: "68", nome: "Rush (R)", tipo: "Bit", condicao: "Nova", preco: 45, vendedor: "Oficial", imagem: "https://cdn-icons-png.flaticon.com/512/3524/3524636.png", descricao: "Uma flat menor. Oferece controle incrível para múltiplos Xtreme Dashes." },
-    { id: "69", nome: "Elevate (E)", tipo: "Bit", condicao: "Nova", preco: 50, vendedor: "Oficial", imagem: "https://cdn-icons-png.flaticon.com/512/3524/3524636.png", descricao: "Design único com suspensão/altura variável." }
+    // === BITS (ATAQUE) ===
+    { id: "T01", nome: "Flat (F)", tipo: "Bit", condicao: "Nova", preco: 35, vendedor: "Oficial", imagem: "https://cdn-icons-png.flaticon.com/512/3524/3524636.png", descricao: "Ponta plana padrão. Acelera intensamente no Xtreme Dash." },
+    { id: "T02", nome: "Low Flat (LF)", tipo: "Bit", condicao: "Nova", preco: 40, vendedor: "Oficial", imagem: "https://cdn-icons-png.flaticon.com/512/3524/3524636.png", descricao: "Flat rebaixada para ataques rasteiros." },
+    { id: "T03", nome: "Gear Flat (GF)", tipo: "Bit", condicao: "Nova", preco: 45, vendedor: "Oficial", imagem: "https://cdn-icons-png.flaticon.com/512/3524/3524636.png", descricao: "Engrenagens até a ponta. Gruda no trilho instantaneamente." },
+    { id: "T04", nome: "Rush (R)", tipo: "Bit", condicao: "Nova", preco: 45, vendedor: "Oficial", imagem: "https://cdn-icons-png.flaticon.com/512/3524/3524636.png", descricao: "Flat menor. Controle perfeito para Xtreme Dashes consecutivos." },
+    { id: "T05", nome: "Low Rush (LR)", tipo: "Bit", condicao: "Nova", preco: 45, vendedor: "Oficial", imagem: "https://cdn-icons-png.flaticon.com/512/3524/3524636.png", descricao: "Versão rebaixada do Rush." },
+    { id: "T06", nome: "Gear Rush (GR)", tipo: "Bit", condicao: "Nova", preco: 50, vendedor: "Oficial", imagem: "https://cdn-icons-png.flaticon.com/512/3524/3524636.png", descricao: "Combinação do controle do Rush com engrenagem agressiva." },
+    { id: "T07", nome: "Accel (A)", tipo: "Bit", condicao: "Nova", preco: 40, vendedor: "Oficial", imagem: "https://cdn-icons-png.flaticon.com/512/3524/3524636.png", descricao: "Arranque explosivo nos primeiros segundos de batalha." },
+    { id: "T08", nome: "Rubber Accel (RA)", tipo: "Bit", condicao: "Nova", preco: 60, vendedor: "Oficial", imagem: "https://cdn-icons-png.flaticon.com/512/3524/3524636.png", descricao: "Borracha pura! Aderência total na arena com velocidade assustadora." },
+    { id: "T09", nome: "Quake (Q)", tipo: "Bit", condicao: "Nova", preco: 45, vendedor: "Oficial", imagem: "https://cdn-icons-png.flaticon.com/512/3524/3524636.png", descricao: "Ponta chanfrada irregular que faz o bey saltar para ataques imprevisíveis." },
+
+    // === BITS (RESISTÊNCIA) ===
+    { id: "T10", nome: "Ball (B)", tipo: "Bit", condicao: "Nova", preco: 40, vendedor: "Oficial", imagem: "https://cdn-icons-png.flaticon.com/512/1046/1046274.png", descricao: "Esférica pura. Mantém o centro e conserva energia." },
+    { id: "T11", nome: "Disc Ball (DB)", tipo: "Bit", condicao: "Nova", preco: 50, vendedor: "Oficial", imagem: "https://cdn-icons-png.flaticon.com/512/1046/1046274.png", descricao: "Possui um anel extra para manter o eixo mesmo perdendo giro." },
+    { id: "T12", nome: "Free Ball (FB)", tipo: "Bit", condicao: "Nova", preco: 55, vendedor: "Oficial", imagem: "https://cdn-icons-png.flaticon.com/512/1046/1046274.png", descricao: "A ponta gira de forma independente da base (Free spin)." },
+    { id: "T13", nome: "Gear Ball (GB)", tipo: "Bit", condicao: "Nova", preco: 45, vendedor: "Oficial", imagem: "https://cdn-icons-png.flaticon.com/512/1046/1046274.png", descricao: "Resistência capaz de usar o trilho se provocada." },
+    { id: "T14", nome: "Orb (O)", tipo: "Bit", condicao: "Nova", preco: 40, vendedor: "Oficial", imagem: "https://cdn-icons-png.flaticon.com/512/1046/1046274.png", descricao: "Esfera de raio menor que a Ball, recuperação mais lenta porém mais estável." },
+    { id: "T15", nome: "Low Orb (LO)", tipo: "Bit", condicao: "Nova", preco: 40, vendedor: "Oficial", imagem: "https://cdn-icons-png.flaticon.com/512/1046/1046274.png", descricao: "Versão rebaixada do Orb." },
+    { id: "T16", nome: "Glide (G)", tipo: "Bit", condicao: "Nova", preco: 45, vendedor: "Oficial", imagem: "https://cdn-icons-png.flaticon.com/512/1046/1046274.png", descricao: "Desliza perfeitamente no centro sem atrito." },
+    { id: "T17", nome: "Elevate (E)", tipo: "Bit", condicao: "Nova", preco: 50, vendedor: "Oficial", imagem: "https://cdn-icons-png.flaticon.com/512/1046/1046274.png", descricao: "Suspensão que sobe e desce, alterando o padrão da batalha." },
+
+    // === BITS (DEFESA) ===
+    { id: "T18", nome: "Needle (N)", tipo: "Bit", condicao: "Nova", preco: 35, vendedor: "Oficial", imagem: "https://cdn-icons-png.flaticon.com/512/6532/6532840.png", descricao: "Agulha pontiaguda. Inclina no impacto para desviar a força." },
+    { id: "T19", nome: "High Needle (HN)", tipo: "Bit", condicao: "Nova", preco: 40, vendedor: "Oficial", imagem: "https://cdn-icons-png.flaticon.com/512/6532/6532840.png", descricao: "Agulha mais alta, permite contra-ataques aéreos." },
+    { id: "T20", nome: "Under Needle (UN)", tipo: "Bit", condicao: "Nova", preco: 40, vendedor: "Oficial", imagem: "https://cdn-icons-png.flaticon.com/512/6532/6532840.png", descricao: "Agulha que protege a parte inferior do Bey." },
+    { id: "T21", nome: "Metal Needle (MN)", tipo: "Bit", condicao: "Nova", preco: 60, vendedor: "Oficial", imagem: "https://cdn-icons-png.flaticon.com/512/6532/6532840.png", descricao: "Ponta de Metal! Atrito praticamente zero no centro." },
+    { id: "T22", nome: "Gear Needle (GN)", tipo: "Bit", condicao: "Nova", preco: 45, vendedor: "Oficial", imagem: "https://cdn-icons-png.flaticon.com/512/6532/6532840.png", descricao: "Agulha com engrenagens estendidas para contra-atacar o trilho." },
+    { id: "T23", nome: "Hexa (H)", tipo: "Bit", condicao: "Nova", preco: 50, vendedor: "Oficial", imagem: "https://cdn-icons-png.flaticon.com/512/1046/1046274.png", descricao: "O monstro da defesa. Formato hexagonal garante que não saia do centro facilmente." },
+    { id: "T24", nome: "Spike (S)", tipo: "Bit", condicao: "Nova", preco: 40, vendedor: "Oficial", imagem: "https://cdn-icons-png.flaticon.com/512/6532/6532840.png", descricao: "Ponta cônica afiada." },
+    { id: "T25", nome: "Bound Spike (BS)", tipo: "Bit", condicao: "Nova", preco: 55, vendedor: "Oficial", imagem: "https://cdn-icons-png.flaticon.com/512/6532/6532840.png", descricao: "Ponta Spike com mola embutida para absorver saltos pesados." },
+    { id: "T26", nome: "Wedge (W)", tipo: "Bit", condicao: "Nova", preco: 45, vendedor: "Oficial", imagem: "https://cdn-icons-png.flaticon.com/512/6532/6532840.png", descricao: "Afasta os oponentes por ter base angular pesada." },
+    { id: "T27", nome: "Dot (D)", tipo: "Bit", condicao: "Nova", preco: 40, vendedor: "Oficial", imagem: "https://cdn-icons-png.flaticon.com/512/6532/6532840.png", descricao: "Pequeno ponto de fricção." },
+    { id: "T28", nome: "Kick (K)", tipo: "Bit", condicao: "Nova", preco: 45, vendedor: "Oficial", imagem: "https://cdn-icons-png.flaticon.com/512/6532/6532840.png", descricao: "Possui um aro móvel que 'chuta' a arena ao ser empurrado para o lado." },
+
+    // === BITS (EQUILÍBRIO) ===
+    { id: "T29", nome: "Taper (T)", tipo: "Bit", condicao: "Nova", preco: 35, vendedor: "Oficial", imagem: "https://cdn-icons-png.flaticon.com/512/3524/3524636.png", descricao: "Plana angulada. Mantém bom ataque com facilidade de controle." },
+    { id: "T30", nome: "High Taper (HT)", tipo: "Bit", condicao: "Nova", preco: 40, vendedor: "Oficial", imagem: "https://cdn-icons-png.flaticon.com/512/3524/3524636.png", descricao: "Versão alta do Taper para ataques Smash." },
+    { id: "T31", nome: "Point (P)", tipo: "Bit", condicao: "Nova", preco: 40, vendedor: "Oficial", imagem: "https://cdn-icons-png.flaticon.com/512/6532/6532840.png", descricao: "Agulha central cercada por flat. Muda o giro conforme inclina." },
+    { id: "T32", nome: "Trans Point (TP)", tipo: "Bit", condicao: "Nova", preco: 50, vendedor: "Oficial", imagem: "https://cdn-icons-png.flaticon.com/512/6532/6532840.png", descricao: "A transição entre Ataque e Defesa ocorre de forma rápida na batalha." },
+    { id: "T33", nome: "Gear Point (GP)", tipo: "Bit", condicao: "Nova", preco: 45, vendedor: "Oficial", imagem: "https://cdn-icons-png.flaticon.com/512/6532/6532840.png", descricao: "Usa o trilho no início e se defende com o centro no final." },
+    { id: "T34", nome: "Unite (U)", tipo: "Bit", condicao: "Nova", preco: 55, vendedor: "Oficial", imagem: "https://cdn-icons-png.flaticon.com/512/6532/6532840.png", descricao: "Agulha de plástico no meio, com anel de borracha em volta." },
+    { id: "T35", nome: "Cyclone (C)", tipo: "Bit", condicao: "Nova", preco: 45, vendedor: "Oficial", imagem: "https://cdn-icons-png.flaticon.com/512/6532/6532840.png", descricao: "Padrão espiral louco pela arena." },
+    { id: "T36", nome: "Level (L)", tipo: "Bit", condicao: "Nova", preco: 45, vendedor: "Oficial", imagem: "https://cdn-icons-png.flaticon.com/512/6532/6532840.png", descricao: "Muda drasticamente dependendo do ângulo de lançamento do Blader." },
+    { id: "T37", nome: "Vortex (V)", tipo: "Bit", condicao: "Nova", preco: 45, vendedor: "Oficial", imagem: "https://cdn-icons-png.flaticon.com/512/6532/6532840.png", descricao: "Cria um movimento constante de flor, contornando o oponente." },
+    { id: "T38", nome: "Zap (Z)", tipo: "Bit", condicao: "Nova", preco: 50, vendedor: "Oficial", imagem: "https://cdn-icons-png.flaticon.com/512/6532/6532840.png", descricao: "Movimentação elétrica e zigue-zague." }
 ];
 
-// O SEGREDO ESTÁ AQUI: V8! Isso reseta e carrega as imagens limpas e perfeitas.
-let produtos = JSON.parse(localStorage.getItem('bX_produtos_v8')) || baseProdutos;
-let carrinho = JSON.parse(localStorage.getItem('bX_carrinho_v8')) || [];
-let usuarioLogado = JSON.parse(localStorage.getItem('bX_user_v8')) || null;
-let transacoes = JSON.parse(localStorage.getItem('bX_transacoes_v8')) || []; 
+// Carregando o Mega Banco de Dados (Versão v9)
+let produtos = JSON.parse(localStorage.getItem('bX_produtos_v9')) || baseProdutos;
+let carrinho = JSON.parse(localStorage.getItem('bX_carrinho_v9')) || [];
+let usuarioLogado = JSON.parse(localStorage.getItem('bX_user_v9')) || null;
+let transacoes = JSON.parse(localStorage.getItem('bX_transacoes_v9')) || []; 
 
 const pagina = document.getElementById('pagina');
 
 function salvarDados() {
-    localStorage.setItem('bX_produtos_v8', JSON.stringify(produtos));
-    localStorage.setItem('bX_carrinho_v8', JSON.stringify(carrinho));
-    localStorage.setItem('bX_user_v8', JSON.stringify(usuarioLogado));
-    localStorage.setItem('bX_transacoes_v8', JSON.stringify(transacoes));
+    localStorage.setItem('bX_produtos_v9', JSON.stringify(produtos));
+    localStorage.setItem('bX_carrinho_v9', JSON.stringify(carrinho));
+    localStorage.setItem('bX_user_v9', JSON.stringify(usuarioLogado));
+    localStorage.setItem('bX_transacoes_v9', JSON.stringify(transacoes));
     
     const qtdTotal = carrinho.reduce((acc, p) => acc + p.quantidade, 0);
     document.getElementById('cart-btn').innerText = `🛒 (${qtdTotal})`;
@@ -70,7 +166,9 @@ function escapeHTML(str) {
 
 function home() {
     document.getElementById('input-busca').value = '';
-    const destaques = baseProdutos.slice(0, 4); 
+    // Pegando algumas blades icônicas para destaque
+    const destaques = baseProdutos.filter(p => ['Dran Sword', 'Cobalt Dragoon', 'Wizard Rod', 'Tyranno Beat'].includes(p.nome)); 
+    
     pagina.innerHTML = `
         <div class="hero">
             <h1>A NOVA ERA LIGA BEYBLADE</h1>
@@ -85,7 +183,7 @@ function home() {
             ${destaques.map(p => `
                 <div class="card" data-action="abrir-produto" data-nome="${escapeHTML(p.nome)}">
                     <span class="badge-tipo">${escapeHTML(p.tipo)}</span>
-                    <img src="${escapeHTML(p.imagem)}" alt="${escapeHTML(p.nome)}">
+                    <img src="${escapeHTML(p.imagem)}" alt="${escapeHTML(p.nome)}" onerror="this.src='https://via.placeholder.com/150/111/fff?text=${encodeURIComponent(p.nome)}'">
                     <h3>${escapeHTML(p.nome)}</h3>
                     <button data-action="abrir-produto" data-nome="${escapeHTML(p.nome)}" style="margin-top:10px;">BUSCAR OFERTAS</button>
                 </div>
@@ -103,7 +201,7 @@ function catalogo() {
             ${baseProdutos.map(p => `
                 <div class="card">
                     <span class="badge-tipo">${escapeHTML(p.tipo)}</span>
-                    <img src="${escapeHTML(p.imagem)}" alt="${escapeHTML(p.nome)}" style="mix-blend-mode: screen;" onerror="this.src='https://via.placeholder.com/150/111/fff?text=${escapeHTML(p.nome)}'">
+                    <img src="${escapeHTML(p.imagem)}" alt="${escapeHTML(p.nome)}" style="mix-blend-mode: screen;" onerror="this.src='https://via.placeholder.com/150/111/fff?text=${encodeURIComponent(p.nome)}'">
                     <h3>${escapeHTML(p.nome)}</h3>
                     <p style="font-size:12px; color:#aaa; margin-bottom:5px;">Preço Sugerido</p>
                     <p class="preco" style="color:#aaa;">R$ ${p.preco.toFixed(2)}</p>
@@ -144,7 +242,7 @@ function marketplace(termo = "") {
             <div class="card" data-action="abrir-produto" data-nome="${escapeHTML(g.nomeExibicao)}">
                 <span class="badge-tipo">${escapeHTML(g.tipo)}</span>
                 <span class="badge-vendedor" style="background:var(--accent); color:#000;">${g.quantidade} OFERTAS</span>
-                <img src="${escapeHTML(g.imagem)}" alt="${escapeHTML(g.nomeExibicao)}" onerror="this.src='https://via.placeholder.com/150/111/fff?text=${escapeHTML(g.nomeExibicao)}'">
+                <img src="${escapeHTML(g.imagem)}" alt="${escapeHTML(g.nomeExibicao)}" onerror="this.src='https://via.placeholder.com/150/111/fff?text=${encodeURIComponent(g.nomeExibicao)}'">
                 <h3>${escapeHTML(g.nomeExibicao)}</h3>
                 <p style="font-size:12px; color:#aaa; margin-bottom:5px;">Valor Médio de Mercado</p>
                 <p class="preco" style="font-size: 24px;">R$ ${precoMedio.toFixed(2)}</p>
@@ -191,7 +289,7 @@ function abrirProduto(nomePeca) {
     pagina.innerHTML = `
         <div class="produto-detalhe">
             <div class="produto-img-container">
-                <img src="${escapeHTML(pOficial.imagem)}" alt="${escapeHTML(pOficial.nome)}" onerror="this.src='https://via.placeholder.com/300/111/fff?text=${escapeHTML(pOficial.nome)}'">
+                <img src="${escapeHTML(pOficial.imagem)}" alt="${escapeHTML(pOficial.nome)}" onerror="this.src='https://via.placeholder.com/300/111/fff?text=${encodeURIComponent(pOficial.nome)}'">
             </div>
             <div class="produto-info">
                 <span class="badge-tipo" style="position:static; display:inline-block; margin-bottom:10px;">${escapeHTML(pOficial.tipo)}</span>
@@ -231,7 +329,7 @@ function abrirPerfil(abaAtiva = 'anuncios') {
             <div class="painel-container">
                 <div class="form-box" style="margin:0; flex:1;">
                     <h2>Vender uma Peça</h2>
-                    <input type="text" id="v-nome" placeholder="Nome da Peça (Ex: Wizard Rod)">
+                    <input type="text" id="v-nome" placeholder="Ex: Aero Pegasus ou 5-60">
                     <div style="display:flex; gap:10px;">
                         <select id="v-tipo" style="flex:1;">
                             <option value="Blade">Blade</option>
@@ -255,7 +353,7 @@ function abrirPerfil(abaAtiva = 'anuncios') {
                     <div class="grid" style="grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));">
                         ${meusProdutos.length > 0 ? meusProdutos.map(p => `
                             <div class="card" style="padding:10px;">
-                                <img src="${escapeHTML(p.imagem)}" style="height:100px;">
+                                <img src="${escapeHTML(p.imagem)}" style="height:100px;" onerror="this.src='https://via.placeholder.com/150/111/fff?text=${encodeURIComponent(p.nome)}'">
                                 <h3 style="font-size:14px;">${escapeHTML(p.nome)}</h3>
                                 <p style="font-size:11px; color:#aaa;">${escapeHTML(p.condicao)}</p>
                                 <p style="color:#00ff88; font-weight:bold;">R$ ${p.preco.toFixed(2)}</p>
@@ -491,7 +589,7 @@ document.addEventListener('click', (e) => {
 
         if (!img) {
             const prodExistente = baseProdutos.find(p => p.nome.toLowerCase() === nome.toLowerCase());
-            img = prodExistente ? prodExistente.imagem : "https://via.placeholder.com/150/222/00f2ff?text=Bey+Custom";
+            img = prodExistente ? prodExistente.imagem : `https://via.placeholder.com/150/222/00f2ff?text=${encodeURIComponent(nome)}`;
         }
 
         const novoId = window.crypto && crypto.randomUUID ? crypto.randomUUID() : Date.now().toString();
@@ -526,10 +624,9 @@ document.getElementById('input-busca').addEventListener('input', (e) => {
     marketplace(e.target.value);
 });
 
-// Tratamento especial para o erro de imagem padrão
+// Tratamento especial global para imagens corrompidas, garantindo que a loja nunca fique feia
 document.addEventListener('error', function (event) {
     if (event.target.tagName.toLowerCase() === 'img') {
-        // Pega o alt text da imagem para colocar no placeholder
         const altText = event.target.getAttribute('alt') || 'Peça';
         event.target.src = `https://via.placeholder.com/150/111/fff?text=${encodeURIComponent(altText)}`;
     }
