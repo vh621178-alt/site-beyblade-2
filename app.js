@@ -97,14 +97,14 @@ function home() {
 function catalogo() {
     pagina.innerHTML = `
         <h2>📚 Catálogo Oficial Beyblade X</h2>
-        <p style="color:#aaa; margin-bottom: 20px;">Consulte as informações técnicas de todas as peças já lançadas na liga e o preço de lançamento sugerido.</p>
+        <p style="color:#aaa; margin-bottom: 20px;">Consulte as informações técnicas de todas as peças já lançadas na liga e o preço sugerido.</p>
         <div class="grid">
             ${baseProdutos.map(p => `
                 <div class="card">
                     <span class="badge-tipo">${escapeHTML(p.tipo)}</span>
                     <img src="${escapeHTML(p.imagem)}" alt="${escapeHTML(p.nome)}" style="mix-blend-mode: screen;">
                     <h3>${escapeHTML(p.nome)}</h3>
-                    <p style="font-size:12px; color:#aaa; margin-bottom:5px;">Preço Sugerido (Lançamento)</p>
+                    <p style="font-size:12px; color:#aaa; margin-bottom:5px;">Preço Sugerido</p>
                     <p class="preco" style="color:#aaa;">R$ ${p.preco.toFixed(2)}</p>
                     <button data-action="abrir-produto" data-nome="${escapeHTML(p.nome)}" style="background:#222; border: 1px solid var(--primary);">PROCURAR NO MARKETPLACE</button>
                 </div>
