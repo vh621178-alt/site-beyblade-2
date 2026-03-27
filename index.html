@@ -1,166 +1,155 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Beyblade Marketplace Banner</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;700&family=Orbitron:wght@500;700;900&display=swap" rel="stylesheet">
-  <style>
-    /* CSS Global */
-    body { margin: 0; background: #000; color: #fff; font-family: 'Rajdhani', sans-serif; overflow: hidden;}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        :root {
+            --primary-red: #ff0000;
+            --dark-red: #8b0000;
+            --bg-black: #050505;
+            --text-white: #ffffff;
+        }
 
-    /* Contêiner Principal do Banner */
-    .beyblade-banner {
-      position: relative;
-      width: 100%;
-      height: 100vh; /* O banner ocupa toda a altura da tela, mude para um valor fixo se preferir (ex: 500px) */
-      background: radial-gradient(circle at center, #1a1a1a, #000); /* Fundo com degradê para o look metálico escuro */
-      overflow: hidden;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
 
-    /* Conteúdo do Banner (Texto e Beyblade) */
-    .banner-content {
-      display: flex;
-      width: 80%;
-      max-width: 1200px;
-      justify-content: space-between;
-      align-items: center;
-      z-index: 10;
-      padding: 50px;
-    }
+        /* Container Principal */
+        .banner-container {
+            position: relative;
+            width: 100%;
+            max-width: 1200px;
+            height: 400px;
+            background: radial-gradient(circle at center, #1a0000 0%, var(--bg-black) 100%);
+            border: 2px solid var(--primary-red);
+            border-radius: 20px;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 0 50px rgba(255, 0, 0, 0.3);
+        }
 
-    /* Visual do Beyblade (Esquerda) */
-    .beyblade-visual {
-      position: relative;
-      width: 40%;
-      aspect-ratio: 1/1; /* Mantém o elemento quadrado */
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
+        /* Efeito de Grade de Fundo */
+        .banner-container::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-image: linear-gradient(rgba(255, 0, 0, 0.05) 1px, transparent 1px),
+                              linear-gradient(90deg, rgba(255, 0, 0, 0.05) 1px, transparent 1px);
+            background-size: 40px 40px;
+            pointer-events: none;
+        }
 
-    /* Imagem Placeholder do Beyblade */
-    .beyblade-image {
-      max-width: 100%;
-      height: auto;
-      object-fit: contain;
-      /* Substitua o URL abaixo pela sua imagem do Beyblade girando (imagem com fundo transparente é ideal) */
-      /* Exemplo: src="https://example.com/seu_beyblade.png" */
-      filter: drop-shadow(0 0 30px rgba(255, 0, 0, 0.8)); /* Brilho vermelho */
-      animation: spin 3s linear infinite; /* Efeito de giro contínuo */
-    }
+        /* Beyblade Girando (Visual) */
+        .spinner {
+            position: absolute;
+            width: 600px;
+            height: 600px;
+            border: 2px solid rgba(255, 0, 0, 0.1);
+            border-radius: 50%;
+            border-top: 2px solid var(--primary-red);
+            animation: rotate 4s linear infinite;
+            opacity: 0.4;
+            z-index: 1;
+        }
 
-    /* Efeito de Brilho de Energia */
-    .glowing-effect {
-      position: absolute;
-      width: 110%;
-      height: 110%;
-      border-radius: 50%;
-      background: radial-gradient(circle, rgba(255, 0, 0, 0.6) 0%, rgba(255, 0, 0, 0) 70%);
-      filter: blur(20px);
-      pointer-events: none;
-    }
+        .spinner-inner {
+            position: absolute;
+            width: 400px;
+            height: 400px;
+            border: 1px dashed var(--primary-red);
+            border-radius: 50%;
+            animation: rotate-reverse 8s linear infinite;
+        }
 
-    /* Contêiner de Texto (Direita) */
-    .banner-text {
-      width: 50%;
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      text-align: left;
-    }
+        /* Texto do Banner */
+        .content {
+            position: relative;
+            z-index: 10;
+            text-align: center;
+            text-transform: uppercase;
+        }
 
-    /* Título EM BREVE */
-    .coming-soon {
-      font-family: 'Orbitron', sans-serif;
-      font-weight: 900;
-      font-size: 8rem; /* Tamanho grande */
-      margin: 0;
-      line-height: 1;
-      background: linear-gradient(180deg, #fff 0%, #ff4d4d 100%); /* Degradê branco para vermelho */
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      text-shadow: 0 0 10px rgba(255, 255, 255, 0.5), 0 0 20px rgba(255, 0, 0, 0.8);
-      margin-bottom: 10px;
-    }
+        .coming-soon {
+            font-size: 1.2rem;
+            color: var(--primary-red);
+            letter-spacing: 10px;
+            margin-bottom: 10px;
+            font-weight: bold;
+            display: block;
+            text-shadow: 0 0 10px var(--primary-red);
+            animation: pulse 2s infinite;
+        }
 
-    /* Subtítulo MARKETPLACE... */
-    .marketplace-title {
-      font-weight: 700;
-      font-size: 1.8rem;
-      margin: 0;
-      color: #fff;
-      text-transform: uppercase;
-      letter-spacing: 1.5px;
-      margin-top: 10px;
-    }
+        .main-title {
+            font-size: 4rem;
+            font-weight: 900;
+            color: var(--text-white);
+            margin: 0;
+            line-height: 1;
+            text-shadow: 4px 4px 0px var(--dark-red);
+        }
 
-    /* Detalhes de Fundo: Linhas Laser e Faíscas */
-    .laser-lines {
-      position: absolute;
-      top: 0; left: 0; width: 100%; height: 100%;
-      pointer-events: none;
-      background:
-        linear-gradient(rgba(255, 0, 0, 0.3) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(255, 0, 0, 0.3) 1px, transparent 1px);
-      background-size: 100px 100px;
-      background-position: center;
-      opacity: 0.2;
-    }
-    .laser-lines::after, .laser-lines::before {
-      content: '';
-      position: absolute;
-      background: rgba(255, 0, 0, 0.8);
-      filter: blur(10px);
-    }
-    .laser-lines::after { width: 150%; height: 5px; top: 10%; left: -25%; transform: rotate(-5deg); }
-    .laser-lines::before { width: 5px; height: 150%; top: -25%; right: 10%; transform: rotate(5deg); }
+        .subtitle {
+            font-size: 1.5rem;
+            color: #ccc;
+            margin-top: 15px;
+            font-weight: 300;
+            letter-spacing: 2px;
+        }
 
-    .sparkles {
-      position: absolute;
-      top: 0; left: 0; width: 100%; height: 100%;
-      pointer-events: none;
-      background-image: radial-gradient(white 1px, transparent 1px),
-                       radial-gradient(white 1px, transparent 1px);
-      background-size: 50px 50px;
-      background-position: 0 0, 25px 25px;
-      opacity: 0.1;
-      animation: sparkles-move 5s linear infinite;
-    }
+        .highlight {
+            color: var(--primary-red);
+            font-weight: bold;
+        }
 
-    /* Animações */
-    @keyframes spin { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
-    @keyframes sparkles-move { from { background-position: 0 0, 25px 25px; } to { background-position: 100px 100px, 125px 125px; } }
+        /* Animações */
+        @keyframes rotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
 
-    /* Responsividade */
-    @media (max-width: 900px) {
-      .banner-content { flex-direction: column-reverse; width: 90%; padding: 20px; }
-      .beyblade-visual { width: 80%; max-width: 300px; margin-top: 20px; }
-      .banner-text { width: 100%; align-items: center; text-align: center; margin-bottom: 20px; }
-      .coming-soon { font-size: 5rem; }
-      .marketplace-title { font-size: 1.2rem; }
-    }
-  </style>
+        @keyframes rotate-reverse {
+            from { transform: rotate(360deg); }
+            to { transform: rotate(0deg); }
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.7; transform: scale(1.05); }
+        }
+
+        /* Responsivo */
+        @media (max-width: 768px) {
+            .main-title { font-size: 2.5rem; }
+            .subtitle { font-size: 1rem; }
+            .banner-container { height: 300px; margin: 20px; }
+        }
+    </style>
+    <title>Banner Beyblade Marketplace</title>
 </head>
 <body>
-  <div class="beyblade-banner">
-    <div class="banner-content">
-      <div class="beyblade-visual">
-        <img src="https://example.com/spinning_beyblade_image.png" alt="Beyblade Girando" class="beyblade-image">
-        <div class="glowing-effect"></div>
-      </div>
-      <div class="banner-text">
-        <h1 class="coming-soon">EM BREVE</h1>
-        <p class="marketplace-title">O MAIOR MARKETPLACE DE BEYBLADE DO BRASIL</p>
-      </div>
+
+    <div class="banner-container">
+        <div class="spinner"></div>
+        <div class="spinner-inner"></div>
+
+        <div class="content">
+            <span class="coming-soon">EM BREVE</span>
+            <h1 class="main-title">O MAIOR MARKETPLACE</h1>
+            <p class="subtitle">DE <span class="highlight">BEYBLADE</span> DO BRASIL</p>
+        </div>
     </div>
-    <div class="laser-lines"></div>
-    <div class="sparkles"></div>
-  </div>
+
 </body>
 </html>
